@@ -6,9 +6,14 @@ on:
   
 jobs:
   update:
+    permissions: 
+      contents: write
     runs-on: ubuntu-latest
+    
     steps:
+    
       - uses: actions/checkout@v3                # clones your repo
+      
       - uses: joblo2213/aoc-badges-action@v3
         with:
           userid: 417093                          # your user id, see setup on how to obtain
@@ -19,7 +24,9 @@ jobs:
           dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge in your file.
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge in your file.
           daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge in your file.
-      - uses: stefanzweifel/git-auto-commit-action@v4     # Step that pushes these local changes back to your github repo
-        with:
-          commit_message: Update badges
-          file_pattern: README.md
+          
+      - name: push changes
+        run: |
+          git add README.md
+          git commit -m "updated badges"
+          git push
