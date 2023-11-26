@@ -27,6 +27,8 @@ jobs:
           
       - name: push changes
         run: |
+          git config --global user.name 'Bethany Janos'
+          git config --global user.email 'bethanyj28@users.noreply.github.com'
           git add README.md
           git commit -m "updated badges"
           git push
