@@ -15,18 +15,16 @@ defmodule Aoc2023.Day03 do
 
   def sum_part_numbers([head | tail]) do
     sum_part_numbers(tail) + Enum.reduce(Enum.at(head, 1)[:nums], 0, fn num, acc -> 
-      range = num[:range]
+      {min, max} = num[:range]
       val = num[:num]
-      min = elem(range, 0)
-      max = elem(range, 1)
 
       symbols = head
       |> Enum.map(fn %{:symbols => symbols} -> symbols end)
       |> List.flatten()
 
       acc + Enum.reduce_while(symbols, 0, fn sym, num_acc -> 
-        sym_idx = sym[:idx]
-        if elem(sym_idx, 0) >= min && elem(sym_idx, 0) <= max do
+        {idx, _} = sym[:idx]
+        if idx >= min && idx <= max do
           {:halt, val}
         else
           {:cont, num_acc}
@@ -46,17 +44,15 @@ defmodule Aoc2023.Day03 do
         acc
       end
 
-      idx = elem(sym[:idx], 0)
+      {idx, _} = sym[:idx]
       
       nums = head
       |> Enum.map(fn %{:nums => nums} -> nums end)
       |> List.flatten()
       
     {gear_num_count, gear_prod} = Enum.reduce_while(nums, {0, 1}, fn num, {count, gear_acc} -> 
-        range = num[:range]
+        {min, max} = num[:range]
         num_val = num[:num]
-        min = elem(range, 0)
-        max = elem(range, 1)
         if idx >= min && idx <= max do
           if count == 2 do # no need to continue, count is too high
             {:halt, {count + 1, gear_acc * num_val}}
@@ -110,7 +106,7 @@ defmodule Aoc2023.Day03 do
         fn x -> x 
       end)
       %{
-        nums: Enum.zip_with(nums, num_idxs, fn x, y -> %{num: x, range: {elem(y, 0) - 1, elem(y, 0) + elem(y, 1)}} end), 
+        nums: Enum.zip_with(nums, num_idxs, fn x, {idx, len} -> %{num: x, range: {idx - 1, idx + len}} end), 
         symbols: Enum.zip_with(symbols, symbols_idxs, fn x, y -> %{symbol: x, idx: y} end)
       }
     end)
