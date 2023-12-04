@@ -16,3 +16,6 @@ Fairly happy with my approach here. I gave into using regex and was able to crea
 This feels super messy, and I'm sure there's a simpler solution here that I'm missing. Similarly to day 2, I build somewhat of a solid foundation by regex-ing symbols and numbers and putting those in a list then parsing it within a 3 row window. I probably could clean some of this up, like make `parse_rows` more general so I can identify which symbols are gears and do the min/max calculations while parsing the rows to avoid duplicate work. The stacking `reduce`s also breaks my brain, but that seems to be the most elixir-y route here.
 
 \* Note: I ended up cleaning up the `parse_rows` and min/max calculations a bit. Next thing I could do is make `parse_rows` slightly less verbose.
+
+## day 4
+Feeling more comfortable with Elixir! I'm sure my code still looks like chaos, but I'm getting more used to pattern matching and the scope that things are updated.
