@@ -19,3 +19,6 @@ This feels super messy, and I'm sure there's a simpler solution here that I'm mi
 
 ## day 4
 Feeling more comfortable with Elixir! I'm sure my code still looks like chaos, but I'm getting more used to pattern matching and the scope that things are updated.
+
+## day 5
+It's starting to get tricky 😅 While reading the second part, I definitely thought "oh cool, I can use my previous solution!" (Narrator: she couldn't). At least the work I did to create the list of numbers didn't go to waste as I could use the first half of the pipeline to still create the ranges and process those. After that, it was just processing the ranges in batches. It feels messy, so I'm sure there are cleaner solutions out there but I'm not too mad at this one.
