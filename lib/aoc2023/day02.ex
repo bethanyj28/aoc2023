@@ -9,7 +9,7 @@ defmodule Aoc2023.Day02 do
     sum_powers(input)
   end
 
-  def sum_games([_]) do
+  def sum_games([]) do
     0
   end
 
@@ -18,7 +18,7 @@ defmodule Aoc2023.Day02 do
     sum_games(tail) + id
   end
 
-  def sum_powers([_]) do
+  def sum_powers([]) do
     0
   end
 

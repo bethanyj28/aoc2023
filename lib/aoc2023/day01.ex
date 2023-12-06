@@ -7,7 +7,7 @@ defmodule Aoc2023.Day01 do
     calibrate(Enum.map(Load.input(filename), fn code -> replace_string_nums(code) end))
   end
 
-  def calibrate([_]) do
+  def calibrate([]) do
     0
   end
 

@@ -3,7 +3,7 @@ defmodule Aoc2023.Day04 do
     count_scratch_card_points(Load.input(filename))
   end
 
-  def count_scratch_card_points([_]), do: 0
+  def count_scratch_card_points([]), do: 0
 
   def count_scratch_card_points([head | tail]) do
     [winner_str] = Regex.run(~r{\:(.*)\|}, head, capture: :all_but_first)
@@ -26,10 +26,9 @@ defmodule Aoc2023.Day04 do
     count_scratch_cards(Load.input(filename), %{})
   end
 
-  def count_scratch_cards([_], counts), do: Enum.sum(Map.values(counts))
+  def count_scratch_cards([], counts), do: Enum.sum(Map.values(counts))
 
   def count_scratch_cards([head | tail], counts) do
-    IO.puts(head)
     [game_id] = Regex.run(~r{Card[ ]*(\d+)}, head, capture: :all_but_first)  |> Enum.map(fn x -> String.to_integer(x) end)
     counts = Map.update(counts, game_id, 1, fn existing_value -> existing_value + 1 end) # count original card
     [winner_str] = Regex.run(~r{\:(.*)\|}, head, capture: :all_but_first)

@@ -1,6 +1,6 @@
 defmodule Aoc2023.Day03 do
   def part1(filename) do
-    input = [""] ++ Load.input(filename) # inserting fake first row
+    input = [""] ++ Load.input(filename) ++ [""] # inserting fake first and last row
     sum_part_numbers(Enum.chunk_every(parse_rows(input), 3, 1, :discard))
   end
 
