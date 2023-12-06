@@ -22,3 +22,6 @@ Feeling more comfortable with Elixir! I'm sure my code still looks like chaos, b
 
 ## day 5
 It's starting to get tricky 😅 While reading the second part, I definitely thought "oh cool, I can use my previous solution!" (Narrator: she couldn't). At least the work I did to create the list of numbers didn't go to waste as I could use the first half of the pipeline to still create the ranges and process those. After that, it was just processing the ranges in batches. It feels messy, so I'm sure there are cleaner solutions out there but I'm not too mad at this one.
+
+## day 6
+I was so excited when I realized IT'S A QUADRATIC. Apparently you could've brute forced it but I'm still proud 😅.
