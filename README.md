@@ -25,3 +25,6 @@ It's starting to get tricky 😅 While reading the second part, I definitely tho
 
 ## day 6
 I was so excited when I realized IT'S A QUADRATIC. Apparently you could've brute forced it but I'm still proud 😅.
+
+## day 7
+Not as bad as I expected! I saw poker and panicked, but wasn't too bad. Wildcards were far simpler than I thought they would be.
