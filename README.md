@@ -28,3 +28,6 @@ I was so excited when I realized IT'S A QUADRATIC. Apparently you could've brute
 
 ## day 7
 Not as bad as I expected! I saw poker and panicked, but wasn't too bad. Wildcards were far simpler than I thought they would be.
+
+## day 8
+Day 8 was a challenge! I had a lot of trouble seeing that it was effectively a LCM problem and even when I did, digging up the recollection of the algorithm (and how to do it for multiple numbers) was a struggle (Sorry, Ms. Baker! At least I remembered the quadratic formula!). Really glad to have done it though and have an excuse to refresh the basics!
