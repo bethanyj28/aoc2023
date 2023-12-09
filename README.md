@@ -31,3 +31,6 @@ Not as bad as I expected! I saw poker and panicked, but wasn't too bad. Wildcard
 
 ## day 8
 Day 8 was a challenge! I had a lot of trouble seeing that it was effectively a LCM problem and even when I did, digging up the recollection of the algorithm (and how to do it for multiple numbers) was a struggle (Sorry, Ms. Baker! At least I remembered the quadratic formula!). Really glad to have done it though and have an excuse to refresh the basics!
+
+## day 9
+I have a busy day ahead of me so I got up early to do this. I was fairly surprised that it was so straight-forward but definitely grateful I won't be spinning my wheels about this for the rest of the day!
